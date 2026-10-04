@@ -101,6 +101,16 @@ a{color:inherit}
 .medal:nth-child(4n+1){--c:var(--magenta)}.medal:nth-child(4n+2){--c:var(--amber)}
 .medal:nth-child(4n+3){--c:var(--cyan)}.medal:nth-child(4n+4){--c:var(--lime)}
 
+/* proof layout */
+.proof{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:start}
+.proof .shelf{grid-template-columns:repeat(2,1fr)}
+.side{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px 22px}
+.side-h{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+.side .skrow{grid-template-columns:1fr;gap:8px;margin-bottom:16px}
+.side .pill{padding:5px 12px;font-size:12.5px;background:var(--bg2)}
+.side .edu{margin-top:8px;padding:16px 18px;background:var(--bg2)}
+.side .edu b{font-size:15px}
+
 /* projects */
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .pcard{background:var(--surface);border:1px solid var(--line);border-top:2px solid var(--c);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
@@ -169,7 +179,7 @@ footer a{text-decoration:none;color:var(--cyan)}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
 
-@media(max-width:940px){.pgrid{grid-template-columns:repeat(2,1fr)}.shelf{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.dock{grid-template-columns:1fr}}
+@media(max-width:940px){.proof{grid-template-columns:1fr}.pgrid{grid-template-columns:repeat(2,1fr)}.shelf{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.dock{grid-template-columns:1fr}}
 @media(max-width:640px){.pgrid,.shelf{grid-template-columns:1fr}.skrow{grid-template-columns:1fr;gap:6px}.section{padding:70px 16px}.metro{padding-left:28px}.stop:before{left:-28px}.avatar{width:104px;height:104px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.bigline span,.pname,.degree,.reveal{opacity:1!important;transform:none!important}}
 </style>
@@ -237,8 +247,9 @@ footer a{text-decoration:none;color:var(--cyan)}
 <section class="section" id="impact">
   <div class="tag reveal">Proof of work</div>
   <h2 class="sec-title reveal">Numbers, not adjectives.</h2>
-  <p class="sec-sub reveal">Results from Codingal, where I lead customer service.</p>
-  <div class="shelf">
+  <p class="sec-sub reveal">Results from Codingal, where I lead customer service, and the toolbox behind them.</p>
+  <div class="proof">
+    <div class="shelf">
     <div class="medal reveal"><div class="coin">📉</div><div class="big">16→9%</div><b>Monthly churn</b><small>44% improvement through AI-powered retention workflows.</small></div>
     <div class="medal reveal"><div class="coin">🎓</div><div class="big">44→56%</div><b>Trial completion</b><small>Redesigned the post-signup customer journey.</small></div>
     <div class="medal reveal"><div class="coin">📘</div><div class="big">15→25%</div><b>Course completion</b><small>Better onboarding and proactive intervention.</small></div>
@@ -248,6 +259,17 @@ footer a{text-decoration:none;color:var(--cyan)}
     <div class="medal reveal"><div class="coin">⚡</div><div class="big">2 min</div><b>Chat first response</b><small>60 minutes on email.</small></div>
     <div class="medal reveal"><div class="coin">⏱️</div><div class="big">&lt;48 hrs</div><b>Average resolution</b><small>Across all channels.</small></div>
   </div>
+    <aside class="side reveal">
+      <h3 class="side-h">Core competencies</h3>
+      <div class="skrow"><div class="skcat">CX &amp; Retention</div><div class="pills"><span class="pill">Customer Experience</span><span class="pill">Customer Success</span><span class="pill">Churn Reduction</span><span class="pill">NPS &amp; CSAT</span><span class="pill">Journey Mapping</span><span class="pill">Onboarding</span></div></div>
+<div class="skrow"><div class="skcat">Operations</div><div class="pills"><span class="pill">Workforce Planning</span><span class="pill">Capacity Management</span><span class="pill">Scheduling</span><span class="pill">SLA Management</span><span class="pill">Escalation Management</span><span class="pill">SOPs</span><span class="pill">Knowledge Management</span></div></div>
+<div class="skrow"><div class="skcat">Leadership</div><div class="pills"><span class="pill">Team Building (25+ FTE)</span><span class="pill">Coaching &amp; Performance Reviews</span><span class="pill">Hiring &amp; Onboarding</span><span class="pill">Cross-functional Work</span><span class="pill">Global Teams</span></div></div>
+<div class="skrow"><div class="skcat">Technology</div><div class="pills"><span class="pill">SQL</span><span class="pill">Redash</span><span class="pill">API Integrations</span><span class="pill">Python</span><span class="pill">Postgres / Neon</span><span class="pill">Cloudflare Workers</span><span class="pill">ETL &amp; Data Pipelines</span><span class="pill">AI Agents (Claude)</span><span class="pill">AI Briefs</span><span class="pill">RAG &amp; Knowledge Bases</span><span class="pill">Slack API</span><span class="pill">Airtable</span><span class="pill">Zendesk</span><span class="pill">Monday.com</span><span class="pill">Intercom</span><span class="pill">Freshdesk</span></div></div>
+<div class="skrow"><div class="skcat">Languages</div><div class="pills"><span class="pill">English</span><span class="pill">Hindi</span><span class="pill">Oriya</span></div></div>
+      <div class="edu"><div><b>B.Tech</b><small>Hardware &amp; Networking</small></div><div style="text-align:right"><b style="font-size:15px">Gandhi Engineering College</b><small>Education</small></div></div>
+    </aside>
+  </div>
+
 </section>
 
 <section class="section" id="projects">
@@ -328,18 +350,6 @@ footer a{text-decoration:none;color:var(--cyan)}
   </div>
 </section>
 
-<section class="section" id="skills">
-  <div class="tag reveal">Toolbox</div>
-  <h2 class="sec-title reveal">Core competencies.</h2>
-  <div style="margin-top:34px" class="reveal">
-    <div class="skrow"><div class="skcat">CX &amp; Retention</div><div class="pills"><span class="pill">Customer Experience</span><span class="pill">Customer Success</span><span class="pill">Churn Reduction</span><span class="pill">NPS &amp; CSAT</span><span class="pill">Journey Mapping</span><span class="pill">Onboarding</span></div></div>
-    <div class="skrow"><div class="skcat">Operations</div><div class="pills"><span class="pill">Workforce Planning</span><span class="pill">Capacity Management</span><span class="pill">Scheduling</span><span class="pill">SLA Management</span><span class="pill">Escalation Management</span><span class="pill">SOPs</span><span class="pill">Knowledge Management</span></div></div>
-    <div class="skrow"><div class="skcat">Leadership</div><div class="pills"><span class="pill">Team Building (25+ FTE)</span><span class="pill">Coaching &amp; Performance Reviews</span><span class="pill">Hiring &amp; Onboarding</span><span class="pill">Cross-functional Work</span><span class="pill">Global Teams</span></div></div>
-    <div class="skrow"><div class="skcat">Technology</div><div class="pills"><span class="pill">SQL</span><span class="pill">Redash</span><span class="pill">API Integrations</span><span class="pill">Python</span><span class="pill">Postgres / Neon</span><span class="pill">Cloudflare Workers</span><span class="pill">ETL &amp; Data Pipelines</span><span class="pill">AI Agents (Claude)</span><span class="pill">AI Briefs</span><span class="pill">RAG &amp; Knowledge Bases</span><span class="pill">Slack API</span><span class="pill">Airtable</span><span class="pill">Zendesk</span><span class="pill">Monday.com</span><span class="pill">Intercom</span><span class="pill">Freshdesk</span></div></div>
-    <div class="skrow"><div class="skcat">Languages</div><div class="pills"><span class="pill">English</span><span class="pill">Hindi</span><span class="pill">Oriya</span></div></div>
-    <div class="edu"><div><b>B.Tech</b><small>Hardware &amp; Networking</small></div><div style="text-align:right"><b style="font-size:15px">Gandhi Engineering College</b><small>Education</small></div></div>
-  </div>
-</section>
 
 <section class="section" id="contact">
   <div class="tag reveal">Reach me</div>
