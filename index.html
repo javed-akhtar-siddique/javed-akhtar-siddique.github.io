@@ -152,14 +152,15 @@ a{color:inherit}
 .edu b{font-size:18px}.edu small{display:block;color:var(--muted);font-family:var(--mono);font-size:12px;margin-top:4px}
 
 /* contact pods */
-.dock{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dock{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .pod{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px 22px;overflow:hidden;transition:transform .25s,border-color .25s;text-decoration:none;display:block}
 .pod:hover{transform:translateY(-5px);border-color:var(--c)}
 .pod:before{content:"";position:absolute;top:-80px;right:-60px;width:220px;height:200px;background:radial-gradient(ellipse,var(--c),transparent 70%);opacity:.14;pointer-events:none}
 .podlbl{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--c);margin-bottom:14px}
-.prompt{font-family:var(--mono);font-size:13.5px;word-break:break-all}
+.prompt{font-family:var(--mono);font-size:13.5px;overflow-wrap:break-word}
+#mailtxt{display:inline-block}
 .hint{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:12px}
-.pod:nth-child(1){--c:var(--cyan)}.pod:nth-child(2){--c:var(--magenta)}.pod:nth-child(3){--c:var(--amber)}
+.pod:nth-child(1){--c:var(--cyan)}.pod:nth-child(2){--c:var(--magenta)}.pod:nth-child(3){--c:var(--amber)}.pod:nth-child(4){--c:var(--lime)}
 .fmt{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
 .fmt a{font-family:var(--mono);font-size:12px;font-weight:700;border:1px solid var(--c);color:var(--c);border-radius:8px;padding:7px 14px;text-decoration:none;transition:background .2s,color .2s}
 .fmt a:hover{background:var(--c);color:#06101a}
@@ -356,6 +357,11 @@ footer a{text-decoration:none;color:var(--cyan)}
       <div class="podlbl">Email · terminal</div>
       <div class="prompt">javed@home:~$ <span id="mailtxt">javed.siddique765@gmail.com</span></div>
       <div class="hint">click to copy address</div>
+    </a>
+    <a class="pod" href="tel:+918217541640">
+      <div class="podlbl">Phone · direct line</div>
+      <div class="prompt">+91-8217541640</div>
+      <div class="hint">tap to call</div>
     </a>
     <a class="pod" href="https://linkedin.com/in/javed-akhtar-53264a16" target="_blank" rel="noopener">
       <div class="podlbl">LinkedIn</div>
